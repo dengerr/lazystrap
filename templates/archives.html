@@ -3,7 +3,7 @@
 {% block content %}
           <h2 class="post-header">{{ ARCHIVES_TITLE }}</h2>
           <div class="post-content">
-{% for year, list in articles_page.object_list|groupby('date.year')|sort(reverse=True) %}
+{% for year, list in articles|groupby('date.year')|sort(reverse=True) %}
                  <div class="archive-wrapper">
             <h4 class="archive-header">{{year}}</h4>
             {% for article in list %}

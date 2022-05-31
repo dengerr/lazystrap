@@ -33,12 +33,12 @@
 {% include "github.html" %}
     <div class="page">
       <div class="header">
-        <a href="{{ SITEURL }}">
-          <img src="{{ SITEURL }}/theme/img/logo.png" alt="lazycoder.ru" />
+        <a href="{{ SITEURL|default('/', true) }}">
+          {{ SITENAME }}
         </a>
-        <div class="navbar-desc">
-          {{ SITESUBTITLE }}
-        </div>
+        <!-- <div class="navbar-desc"> -->
+        <!--   {{ SITESUBTITLE }} -->
+        <!-- </div> -->
       </div>
       <div class="container">
       {% block content %}
@@ -48,7 +48,7 @@
     <footer class="footer-wrapper">
       <div class="container">
         <div class="footer">
-        {% for p in PAGES %}
+        {% for p in pages %}
             <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
         {% endfor %}
           <a href="{{ SITEURL }}/archives">{{ ARCHIVES_TITLE }}</a>
@@ -58,7 +58,7 @@
         {% endfor %}
         </div>
         <div class="footer">
-          <span id="years">2008-2014</span> &copy; {{ SITESUBTITLE }} | Powered by <a href="http://getpelican.com">Pelican</a>| <a href="http://creativecommons.org/licenses/by/4.0/">CC BY</a>
+          <span id="years">2008-2014</span> &copy; {{ AUTHOR }} | Powered by <a href="http://getpelican.com">Pelican</a>| <a href="http://creativecommons.org/licenses/by/4.0/">CC BY</a>
         </div>
       </div>
     </footer>

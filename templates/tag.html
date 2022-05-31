@@ -3,7 +3,7 @@
 {% block content %}
           <h2 class="post-header">{{ TAG_PAGE_TITLE }} <i>{{tag}}</i></h2>
           <div class="post-content">
-          {% for article in articles_page.object_list %}
+          {% for article in articles %}
             <div class="recent-post-header">
               <h4><a class="header-link" href="{{ SITEURL }}/{{ article.url }}">{{article.title}}&nbsp;<span class="link">&raquo;</span></a></h4>            
               <div class="tags">

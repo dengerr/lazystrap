@@ -115,6 +115,7 @@ blockquote .small:before {
 
 img {
     vertical-align: middle;
+    max-width: 100%;
 }
 
 .link, a {
@@ -147,6 +148,7 @@ a:hover {
 .header {
     background-color: #281f1f;
     text-align: center;
+    font-size: 18px;
     box-shadow: gray 0px 0px 5px;
     margin-bottom: 35px;
     padding-top: 7px;
