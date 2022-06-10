@@ -51,7 +51,7 @@
         {% for p in pages %}
             <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
         {% endfor %}
-          <a href="{{ SITEURL }}/archives">{{ ARCHIVES_TITLE }}</a>
+          <a href="{{ SITEURL }}/archives/">{{ ARCHIVES_TITLE }}</a>
           <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}">Atom feed</a>
         {% for row in SOCIAL %}  
           <a href="{{ row[1] }}">{{ row[0] }}</a>
