@@ -15,3 +15,13 @@ s.parentNode.insertBefore(hcc, s.nextSibling);
 })();
 </script>
 {% endif %}
+
+{% if ISSO_COMMENTS_DOMAIN %}
+<script data-isso="//{{ ISSO_COMMENTS_DOMAIN }}/"
+		src="//{{ ISSO_COMMENTS_DOMAIN }}/js/embed.min.js"></script>
+
+<section id="isso-thread">
+    <noscript>Javascript needs to be activated to view comments.</noscript>
+</section>
+{% endif %}
+
